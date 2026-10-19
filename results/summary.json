@@ -1,0 +1,93 @@
+{
+  "overall_test_accuracy_pct": 70.08130081300813,
+  "per_class": {
+    "Healthy": {
+      "file": "H_4_0.csv",
+      "correct": 410,
+      "total": 410,
+      "accuracy_pct": 100.0,
+      "one_vs_rest_confusion_matrix": [
+        [
+          452,
+          368
+        ],
+        [
+          0,
+          410
+        ]
+      ]
+    },
+    "Inner race": {
+      "file": "I_4_2.csv",
+      "correct": 410,
+      "total": 410,
+      "accuracy_pct": 100.0,
+      "one_vs_rest_confusion_matrix": [
+        [
+          820,
+          0
+        ],
+        [
+          0,
+          410
+        ]
+      ]
+    },
+    "Outer race": {
+      "file": "O_8_2.csv",
+      "correct": 42,
+      "total": 410,
+      "accuracy_pct": 10.24390243902439,
+      "one_vs_rest_confusion_matrix": [
+        [
+          820,
+          0
+        ],
+        [
+          368,
+          42
+        ]
+      ]
+    }
+  },
+  "class_order": [
+    "Healthy",
+    "Inner race",
+    "Outer race"
+  ],
+  "confusion_matrix": [
+    [
+      410,
+      0,
+      0
+    ],
+    [
+      0,
+      410,
+      0
+    ],
+    [
+      368,
+      0,
+      42
+    ]
+  ],
+  "best_epoch": 13,
+  "best_validation_loss": 0.018045806817284762,
+  "config": {
+    "signal_length": 1024,
+    "batch_size": 32,
+    "seed": 42,
+    "max_samples": 420000,
+    "max_epochs": 50,
+    "patience": 10,
+    "learning_rate": 0.001,
+    "device": "cpu",
+    "torch_version": "2.9.1",
+    "numpy_version": "2.1.3"
+  },
+  "epochs_completed": 23,
+  "best_validation_accuracy_pct": 98.9430894308943,
+  "source_script_sha256": "226b1dc5cf9a636a81b97f397bd4fb18bf5641034a3722e432726ece4aa2cf10",
+  "evidence": "Aggregate measurements from one local CPU run; original recordings are not distributed."
+}

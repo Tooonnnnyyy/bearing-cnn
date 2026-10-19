@@ -1,0 +1,22 @@
+# Local inputs and derived per-example artifacts stay private.
+data/
+*.csv
+*.pdf
+*.pptx
+*.pt
+*.pth
+*.onnx
+*.log
+*.zip
+*.ipynb
+.env
+.env.*
+.venv/
+venv/
+.vscode/
+__pycache__/
+*.pyc
+.DS_Store
+bearing_cnn_results/
+runs/
+test-results/

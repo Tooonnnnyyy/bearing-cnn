@@ -1,0 +1,103 @@
+{
+  "protocol": "github-project-v1",
+  "protocol_version": 1,
+  "protocol_ref": "docs/github-operating-protocol",
+  "project": "Tooonnnnyyy/bearing-cnn",
+  "updated_at": "2026-10-19T19:10:15.279870+00:00",
+  "source": {
+    "default_branch": "main",
+    "commit": null,
+    "visibility": "public repository requested; publication pending"
+  },
+  "commands": {
+    "setup": "python -m pip install -r requirements.txt",
+    "test": "python -m unittest discover -s tests -v",
+    "build": "not_applicable: Python source distribution"
+  },
+  "checks": {
+    "repository": {
+      "state": "pass",
+      "checked_at": "2026-10-19T19:10:15.279870+00:00",
+      "owner": "repository maintainer",
+      "evidence": [
+        "Bilingual README, pinned direct dependencies, source script and four passing synthetic tests."
+      ],
+      "reason": null,
+      "next_action": "Verify after initial push"
+    },
+    "issues_projects": {
+      "state": "pending",
+      "checked_at": "2026-10-19T19:10:15.279870+00:00",
+      "owner": "repository maintainer",
+      "evidence": [],
+      "reason": "Not evaluated yet",
+      "next_action": "Verify after initial push"
+    },
+    "pull_requests": {
+      "state": "pending",
+      "checked_at": "2026-10-19T19:10:15.279870+00:00",
+      "owner": "repository maintainer",
+      "evidence": [],
+      "reason": "Not evaluated yet",
+      "next_action": "Verify after initial push"
+    },
+    "actions": {
+      "state": "pending",
+      "checked_at": "2026-10-19T19:10:15.279870+00:00",
+      "owner": "repository maintainer",
+      "evidence": [],
+      "reason": "Not evaluated yet",
+      "next_action": "Verify after initial push"
+    },
+    "release_rollback": {
+      "state": "not_applicable",
+      "checked_at": "2026-10-19T19:10:15.279870+00:00",
+      "owner": "repository maintainer",
+      "evidence": [
+        "Git commit identifies source; create a new revert commit for any future rollback."
+      ],
+      "reason": "Initial source publication with no deployment or formal release.",
+      "next_action": null
+    },
+    "packages": {
+      "state": "not_applicable",
+      "checked_at": "2026-10-19T19:10:15.279870+00:00",
+      "owner": "repository maintainer",
+      "evidence": [
+        "README documents local installation."
+      ],
+      "reason": "Source repository; no package registry distribution requested.",
+      "next_action": null
+    },
+    "retrieval": {
+      "state": "pass",
+      "checked_at": "2026-10-19T19:10:15.279870+00:00",
+      "owner": "repository maintainer",
+      "evidence": [
+        "AGENTS.md links canonical protocol; version 1 source and template read."
+      ],
+      "reason": null,
+      "next_action": null
+    },
+    "public_security": {
+      "state": "pass",
+      "checked_at": "2026-10-19T19:10:15.279870+00:00",
+      "owner": "repository maintainer",
+      "evidence": [
+        "Reviewed allowlist: code, documentation, tests, aggregate JSON and stripped-metadata PNG.",
+        "Raw CSV, course documents, logs, identifiers, local paths, predictions and weights excluded.",
+        "New commits use GitHub noreply author/committer identity."
+      ],
+      "reason": "Point-in-time review; future changes require a new review.",
+      "next_action": "Audit staged files and committed metadata before push"
+    }
+  },
+  "rollback": [],
+  "open": [
+    "Dataset provenance and redistribution license not established; recordings remain private.",
+    "Outer-race test recall is 10.24%; cause not established.",
+    "Colab, CUDA, MPS and production inference are unverified."
+  ],
+  "protocol_source_revision": "1d21dad4311dd716e73413dbbe3b469a8abddc46",
+  "priority": "P0"
+}
