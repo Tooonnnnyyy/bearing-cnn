@@ -31,3 +31,5 @@ The model has two convolution layers and two dense layers. Softmax is applied on
 Implemented and run: CSV loading, segmentation, scaling, training, validation selection, test inference and saved metrics. Tested with synthetic data: parsing and numerical invariants, gradient updates and the full CLI path. Not implemented: production inference service, streaming buffer, model monitoring, automated retraining, calibrated abstention or field deployment.
 
 For production, the complete input and preprocessing contract must travel with the weights. A known bad outer-race result is a reason to keep the baseline in research, not a reason to silently change the test split.
+
+Optional [experiment tools](experiments.md) add window-local preprocessing, FFT/PSD diagnostics, recording-level split manifests and compatible-checkpoint transfer learning. They use separate outputs and default to development-only evaluation. The original reference script remains unchanged.

@@ -3,11 +3,13 @@
   "protocol_version": 1,
   "protocol_ref": "docs/github-operating-protocol",
   "project": "Tooonnnnyyy/bearing-cnn",
-  "updated_at": "2026-10-19T19:10:15.279870+00:00",
+  "updated_at": "2026-10-19T19:24:13.110213+00:00",
   "source": {
     "default_branch": "main",
-    "commit": null,
-    "visibility": "public repository requested; publication pending"
+    "commit": "bf93be94ca5dbef2dd47a825c9861d9d2554641e",
+    "visibility": "public",
+    "publication_state": "published",
+    "commit_scope": "Verified reference code and aggregate results; later documentation-only commits are identified by Git history."
   },
   "commands": {
     "setup": "python -m pip install -r requirements.txt",
@@ -17,37 +19,47 @@
   "checks": {
     "repository": {
       "state": "pass",
-      "checked_at": "2026-10-19T19:10:15.279870+00:00",
+      "checked_at": "2026-10-19T19:24:13.110213+00:00",
       "owner": "repository maintainer",
       "evidence": [
-        "Bilingual README, pinned direct dependencies, source script and four passing synthetic tests."
+        "Canonical public repository and push permission verified by GitHub API.",
+        "Remote reference main matched bf93be94ca5dbef2dd47a825c9861d9d2554641e; public README and accurate stack topics verified."
       ],
       "reason": null,
-      "next_action": "Verify after initial push"
+      "next_action": null
     },
     "issues_projects": {
-      "state": "pending",
-      "checked_at": "2026-10-19T19:10:15.279870+00:00",
+      "state": "pass",
+      "checked_at": "2026-10-19T19:24:13.110213+00:00",
       "owner": "repository maintainer",
-      "evidence": [],
-      "reason": "Not evaluated yet",
-      "next_action": "Verify after initial push"
+      "evidence": [
+        "Issue #1 has P0 acceptance criteria and belongs to the private Bearing CNN Project #4."
+      ],
+      "reason": null,
+      "next_action": null
     },
     "pull_requests": {
-      "state": "pending",
-      "checked_at": "2026-10-19T19:10:15.279870+00:00",
+      "state": "pass",
+      "checked_at": "2026-10-19T19:24:13.110213+00:00",
       "owner": "repository maintainer",
-      "evidence": [],
-      "reason": "Not evaluated yet",
-      "next_action": "Verify after initial push"
+      "evidence": [
+        "Owner explicitly approved main protection: strict test check required, force pushes and deletions disabled, no mandatory reviews, administrator bypass retained.",
+        "Protection applied and independently retrieved from GitHub API on 2026-10-19.",
+        "Follow-up publication evidence uses a documentation branch; final PR and commit are recorded in repository history."
+      ],
+      "reason": null,
+      "next_action": null
     },
     "actions": {
-      "state": "pending",
-      "checked_at": "2026-10-19T19:10:15.279870+00:00",
+      "state": "pass",
+      "checked_at": "2026-10-19T19:24:13.110213+00:00",
       "owner": "repository maintainer",
-      "evidence": [],
-      "reason": "Not evaluated yet",
-      "next_action": "Verify after initial push"
+      "evidence": [
+        "Four synthetic pipeline tests passed for reference commit bf93be94ca5dbef2dd47a825c9861d9d2554641e: https://github.com/Tooonnnnyyy/bearing-cnn/actions/runs/39308762167",
+        "Four local synthetic tests rerun successfully on 2026-10-19; they do not establish private-data accuracy."
+      ],
+      "reason": null,
+      "next_action": null
     },
     "release_rollback": {
       "state": "not_applicable",
@@ -71,25 +83,27 @@
     },
     "retrieval": {
       "state": "pass",
-      "checked_at": "2026-10-19T19:10:15.279870+00:00",
+      "checked_at": "2026-10-19T19:24:13.110213+00:00",
       "owner": "repository maintainer",
       "evidence": [
-        "AGENTS.md links canonical protocol; version 1 source and template read."
+        "Canonical protocol version 1 verified at source revision 1d21dad4311dd716e73413dbbe3b469a8abddc46.",
+        "Live learning map and all nine new articles verified: https://tooonnnnyyy.github.io/knowledge-base/notes/mlops-learning-map/"
       ],
       "reason": null,
       "next_action": null
     },
     "public_security": {
       "state": "pass",
-      "checked_at": "2026-10-19T19:10:15.279870+00:00",
+      "checked_at": "2026-10-19T19:24:13.110213+00:00",
       "owner": "repository maintainer",
       "evidence": [
-        "Reviewed allowlist: code, documentation, tests, aggregate JSON and stripped-metadata PNG.",
-        "Raw CSV, course documents, logs, identifiers, local paths, predictions and weights excluded.",
-        "New commits use GitHub noreply author/committer identity."
+        "Reviewed allowlist: code, documentation, synthetic tests, aggregate JSON and stripped-metadata PNG.",
+        "No raw CSV, slides/PDFs, credentials, personal paths, logs, weights or per-window predictions in tracked files.",
+        "All new author and committer identities use the public handle and GitHub noreply address.",
+        "Public confusion-matrix PNG retrieved and matched the reviewed local file. This is a point-in-time review."
       ],
-      "reason": "Point-in-time review; future changes require a new review.",
-      "next_action": "Audit staged files and committed metadata before push"
+      "reason": null,
+      "next_action": null
     }
   },
   "rollback": [],
@@ -99,5 +113,42 @@
     "Colab, CUDA, MPS and production inference are unverified."
   ],
   "protocol_source_revision": "1d21dad4311dd716e73413dbbe3b469a8abddc46",
-  "priority": "P0"
+  "priority": "P0",
+  "issue": "https://github.com/Tooonnnnyyy/bearing-cnn/issues/1",
+  "project_board": "https://github.com/users/Tooonnnnyyy/projects/4",
+  "wiki": {
+    "url": "https://tooonnnnyyy.github.io/knowledge-base/notes/mlops-learning-map/",
+    "source_commit": "85503a943c65388fcec2784f9d5eb319188d67fe",
+    "actions": "https://github.com/Tooonnnnyyy/knowledge-base/actions/runs/39310081308",
+    "state": "pass",
+    "checked_at": "2026-10-19T19:24:13.110213+00:00"
+  },
+  "signal_experiments": {
+    "checked_at": "2026-10-19T19:47:19.090542+00:00",
+    "scope": "User-requested preprocessing/FFT, split strategies/cross-domain, transfer learning and samples/parameters/LLM scale extension.",
+    "authorization": "Continuation of the approved code and learning-content update; unrelated releases remain outside scope.",
+    "checks": {
+      "local": {
+        "state": "pass",
+        "evidence": "12 Python checks and three development runs; Wiki 22 logic checks, protocol and build of 92 articles."
+      },
+      "privacy": {
+        "state": "pass",
+        "evidence": "Sanitized prose/code, aggregate development metrics and synthetic figure only; original reference script unchanged."
+      },
+      "remote": {
+        "state": "pending",
+        "reason": "Feature PR and commit-specific CI will record final publication evidence."
+      },
+      "browser": {
+        "state": "pass",
+        "evidence": "Wiki isolated browser suite 14/14 passed; 92 reviewed articles."
+      }
+    },
+    "limits": [
+      "Real sampling rate and physical group/domain identity unknown.",
+      "No new test evaluation or real-data transfer gain claimed.",
+      "Current GPT/Claude parameter counts are not inferred."
+    ]
+  }
 }

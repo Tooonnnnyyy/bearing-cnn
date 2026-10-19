@@ -1,0 +1,227 @@
+{
+  "scope": "Development-only comparison on the original fixed recording split; no new test claim.",
+  "selection": "Minimum validation cross-entropy for every run, not maximum accuracy.",
+  "limits": [
+    "Single seed; three validation recordings; unknown physical-bearing identities and sampling rate.",
+    "Original test results were previously seen; new independent testing is needed for further generalization claims.",
+    "No real-data Hz filtering or transfer-learning accuracy experiment was performed."
+  ],
+  "experiments": [
+    {
+      "experiment": "dev-raw",
+      "config": {
+        "preprocessing": {
+          "detrend": "none",
+          "sample_rate": null,
+          "low_hz": null,
+          "high_hz": null,
+          "notch_hz": null,
+          "notch_q": 30.0,
+          "order": 4
+        },
+        "representation": "time",
+        "raw_length": 1024,
+        "input_features": 1024,
+        "batch_size": 32,
+        "normalization_mean": 17.805860452722637,
+        "normalization_std": 26.899870909305836,
+        "normalization_fit": "target train only",
+        "seed": 42,
+        "max_epochs": 50,
+        "patience": 10,
+        "learning_rate": 0.001,
+        "unfreeze_after": 0,
+        "max_samples": 420000,
+        "threads": 4,
+        "device": "cpu",
+        "torch_version": "2.9.1",
+        "numpy_version": "2.1.3",
+        "scipy_version": "1.15.3"
+      },
+      "best_epoch": 13,
+      "stopped_epoch": 23,
+      "validation": {
+        "accuracy_pct": 98.9430894308943,
+        "balanced_accuracy_pct": 98.9430894308943,
+        "macro_f1_pct": 98.94282372180595,
+        "class_order": [
+          "Healthy",
+          "Inner race",
+          "Outer race"
+        ],
+        "recall_pct": [
+          100.0,
+          100.0,
+          96.82926829268293
+        ],
+        "precision_pct": [
+          96.92671394799054,
+          100.0,
+          100.0
+        ],
+        "confusion_matrix": [
+          [
+            410,
+            0,
+            0
+          ],
+          [
+            0,
+            410,
+            0
+          ],
+          [
+            13,
+            0,
+            397
+          ]
+        ]
+      },
+      "test_evaluated": false
+    },
+    {
+      "experiment": "dev-demean",
+      "config": {
+        "preprocessing": {
+          "detrend": "constant",
+          "sample_rate": null,
+          "low_hz": null,
+          "high_hz": null,
+          "notch_hz": null,
+          "notch_q": 30.0,
+          "order": 4
+        },
+        "representation": "time",
+        "raw_length": 1024,
+        "input_features": 1024,
+        "batch_size": 32,
+        "normalization_mean": 0.0,
+        "normalization_std": 13.340218543983832,
+        "normalization_fit": "target train only",
+        "seed": 42,
+        "max_epochs": 50,
+        "patience": 10,
+        "learning_rate": 0.001,
+        "unfreeze_after": 0,
+        "max_samples": 420000,
+        "threads": 4,
+        "device": "cpu",
+        "torch_version": "2.9.1",
+        "numpy_version": "2.1.3",
+        "scipy_version": "1.15.3"
+      },
+      "best_epoch": 1,
+      "stopped_epoch": 11,
+      "validation": {
+        "accuracy_pct": 66.66666666666667,
+        "balanced_accuracy_pct": 66.66666666666666,
+        "macro_f1_pct": 55.55555555555555,
+        "class_order": [
+          "Healthy",
+          "Inner race",
+          "Outer race"
+        ],
+        "recall_pct": [
+          100.0,
+          0.0,
+          100.0
+        ],
+        "precision_pct": [
+          100.0,
+          0.0,
+          50.0
+        ],
+        "confusion_matrix": [
+          [
+            410,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            410
+          ],
+          [
+            0,
+            0,
+            410
+          ]
+        ]
+      },
+      "test_evaluated": false
+    },
+    {
+      "experiment": "dev-spectrum",
+      "config": {
+        "preprocessing": {
+          "detrend": "constant",
+          "sample_rate": null,
+          "low_hz": null,
+          "high_hz": null,
+          "notch_hz": null,
+          "notch_q": 30.0,
+          "order": 4
+        },
+        "representation": "log-spectrum",
+        "raw_length": 1024,
+        "input_features": 513,
+        "batch_size": 32,
+        "normalization_mean": 0.30575329459019884,
+        "normalization_std": 0.35666963204738333,
+        "normalization_fit": "target train only",
+        "seed": 42,
+        "max_epochs": 50,
+        "patience": 10,
+        "learning_rate": 0.001,
+        "unfreeze_after": 0,
+        "max_samples": 420000,
+        "threads": 4,
+        "device": "cpu",
+        "torch_version": "2.9.1",
+        "numpy_version": "2.1.3",
+        "scipy_version": "1.15.3"
+      },
+      "best_epoch": 21,
+      "stopped_epoch": 31,
+      "validation": {
+        "accuracy_pct": 97.39837398373983,
+        "balanced_accuracy_pct": 97.39837398373984,
+        "macro_f1_pct": 97.3764927843773,
+        "class_order": [
+          "Healthy",
+          "Inner race",
+          "Outer race"
+        ],
+        "recall_pct": [
+          100.0,
+          99.51219512195122,
+          92.6829268292683
+        ],
+        "precision_pct": [
+          97.61904761904762,
+          95.32710280373831,
+          99.47643979057592
+        ],
+        "confusion_matrix": [
+          [
+            410,
+            0,
+            0
+          ],
+          [
+            0,
+            408,
+            2
+          ],
+          [
+            10,
+            20,
+            380
+          ]
+        ]
+      },
+      "test_evaluated": false
+    }
+  ]
+}

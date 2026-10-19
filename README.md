@@ -42,7 +42,20 @@ Epoch 13 was restored after stopping at epoch 23. Its validation accuracy was 98
 
 ![Three-class and one-versus-rest confusion matrices; outer-race recall is 42 of 410](results/confusion-matrices.png)
 
-[Aggregate metrics](results/summary.json) · [Pipeline walkthrough](docs/workflow.md) · [Learning articles](https://github.com/Tooonnnnyyy/knowledge-base/tree/content/bearing-cnn/content/posts)
+[Aggregate metrics](results/summary.json) · [Pipeline walkthrough](docs/workflow.md) · [MLOps learning map](https://tooonnnnyyy.github.io/knowledge-base/notes/mlops-learning-map/)
+
+## Optional experiments
+
+[Preprocessing, FFT, split strategies and transfer learning](docs/experiments.md) provide separate tools while preserving the reference script and result:
+
+```bash
+python -m pip install -r requirements-experiments.txt
+python signal_diagnostics.py --demo --output-dir runs/synthetic-diagnostics
+python train_experiment.py --data-dir data --detrend constant --output-dir runs/dev-demean
+python learning_scale.py
+```
+
+The experiment runner defaults to **training and validation only**. Hz filters require a known sampling rate. Recording-level split manifests support random, stratified, grouped, temporal and cross-domain designs. Transfer loading checks compatible preprocessing and known source/target holdout overlap. These tools do not establish improved test accuracy; inspect their evidence limits in the guide.
 
 Local runs generate model weights, normalization parameters, metrics, predictions and figures. Keep these under ignored `runs/`. Use a new `--output-dir` per experiment to avoid overwriting evidence. The script is byte-identical to the reference training script; its SHA-256 is recorded in the summary.
 
@@ -52,7 +65,7 @@ Local runs generate model weights, normalization parameters, metrics, prediction
 python -m unittest discover -s tests -v
 ```
 
-CI checks parsing, recording separation, tensor dimensions, gradient updates, metrics and synthetic end-to-end execution. CI does **not** reproduce the private-recording accuracy experiment.
+Install `requirements-experiments.txt` to run the complete suite. CI checks parsing, recording separation, tensor dimensions, gradient updates, metrics, spectral scaling, filter behavior, split feasibility, transfer guards and synthetic end-to-end execution. CI does **not** reproduce the private-recording accuracy experiment.
 
 ## 中文
 
@@ -63,3 +76,5 @@ CI checks parsing, recording separation, tensor dimensions, gradient updates, me
 本轮总体准确率 70.08%；健康与内圈召回率均为 100%，外圈仅 10.24%。外圈 410 段中有 368 段被判断为健康。相同环境重复运行得到一致结果，并不证明新设备或其他工况也能识别良好。
 
 本机 CPU 已能完成该实验。Colab 的 GPU 可用于较大的实验，但更换算力不会自动修正数据覆盖或泛化问题。
+
+[扩展实验说明](docs/experiments.md#中文)提供预处理、FFT／PSD、不同数据划分和迁移学习代码。新实验默认只读训练和验证文件；真实采样率未知时不猜 Hz。`learning_scale.py` 解释采样点、窗口、batch、epoch 和 43,651 个参数之间的关系，帮助连接到大语言模型的 token、context 与模型规模概念。

@@ -9,6 +9,11 @@ data/
 *.log
 *.zip
 *.ipynb
+*.npy
+*.npz
+*.pkl
+metadata.json
+split-manifest.json
 .env
 .env.*
 .venv/
