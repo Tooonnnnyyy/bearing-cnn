@@ -3,13 +3,13 @@
   "protocol_version": 1,
   "protocol_ref": "docs/github-operating-protocol",
   "project": "Tooonnnnyyy/bearing-cnn",
-  "updated_at": "2026-10-19T19:24:13.110213+00:00",
+  "updated_at": "2026-10-19T23:24:14.278104+00:00",
   "source": {
     "default_branch": "main",
-    "commit": "bf93be94ca5dbef2dd47a825c9861d9d2554641e",
+    "commit": "7546930f1a28a91c174916e83b517236ea28b4fa",
     "visibility": "public",
     "publication_state": "published",
-    "commit_scope": "Verified reference code and aggregate results; later documentation-only commits are identified by Git history."
+    "commit_scope": "Reference baseline plus reviewed signal experiments; raw data and private artifacts remain excluded."
   },
   "commands": {
     "setup": "python -m pip install -r requirements.txt",
@@ -23,7 +23,7 @@
       "owner": "repository maintainer",
       "evidence": [
         "Canonical public repository and push permission verified by GitHub API.",
-        "Remote reference main matched bf93be94ca5dbef2dd47a825c9861d9d2554641e; public README and accurate stack topics verified."
+        "Remote main matched 7546930f1a28a91c174916e83b517236ea28b4fa; public README and topics verified."
       ],
       "reason": null,
       "next_action": null
@@ -45,7 +45,7 @@
       "evidence": [
         "Owner explicitly approved main protection: strict test check required, force pushes and deletions disabled, no mandatory reviews, administrator bypass retained.",
         "Protection applied and independently retrieved from GitHub API on 2026-10-19.",
-        "Follow-up publication evidence uses a documentation branch; final PR and commit are recorded in repository history."
+        "Extension PR #2 merged at 7546930f1a28a91c174916e83b517236ea28b4fa after required test passed: https://github.com/Tooonnnnyyy/bearing-cnn/pull/2"
       ],
       "reason": null,
       "next_action": null
@@ -55,8 +55,8 @@
       "checked_at": "2026-10-19T19:24:13.110213+00:00",
       "owner": "repository maintainer",
       "evidence": [
-        "Four synthetic pipeline tests passed for reference commit bf93be94ca5dbef2dd47a825c9861d9d2554641e: https://github.com/Tooonnnnyyy/bearing-cnn/actions/runs/39308762167",
-        "Four local synthetic tests rerun successfully on 2026-10-19; they do not establish private-data accuracy."
+        "All 12 local tests passed for extension commit 7546930f1a28a91c174916e83b517236ea28b4fa.",
+        "Main CI passed: https://github.com/Tooonnnnyyy/bearing-cnn/actions/runs/39314267171"
       ],
       "reason": null,
       "next_action": null
@@ -118,13 +118,13 @@
   "project_board": "https://github.com/users/Tooonnnnyyy/projects/4",
   "wiki": {
     "url": "https://tooonnnnyyy.github.io/knowledge-base/notes/mlops-learning-map/",
-    "source_commit": "85503a943c65388fcec2784f9d5eb319188d67fe",
-    "actions": "https://github.com/Tooonnnnyyy/knowledge-base/actions/runs/39310081308",
+    "source_commit": "9a39f4c13a44e1d454164857b56e004e687ee7be",
+    "actions": "https://github.com/Tooonnnnyyy/knowledge-base/actions/runs/39314319861",
     "state": "pass",
-    "checked_at": "2026-10-19T19:24:13.110213+00:00"
+    "checked_at": "2026-10-19T23:24:14.278104+00:00"
   },
   "signal_experiments": {
-    "checked_at": "2026-10-19T19:47:19.090542+00:00",
+    "checked_at": "2026-10-19T23:24:14.278104+00:00",
     "scope": "User-requested preprocessing/FFT, split strategies/cross-domain, transfer learning and samples/parameters/LLM scale extension.",
     "authorization": "Continuation of the approved code and learning-content update; unrelated releases remain outside scope.",
     "checks": {
@@ -137,8 +137,11 @@
         "evidence": "Sanitized prose/code, aggregate development metrics and synthetic figure only; original reference script unchanged."
       },
       "remote": {
-        "state": "pending",
-        "reason": "Feature PR and commit-specific CI will record final publication evidence."
+        "state": "pass",
+        "evidence": [
+          "Extension PR #2 merged and protected main CI passed: https://github.com/Tooonnnnyyy/bearing-cnn/actions/runs/39314267171",
+          "Public main matched 7546930f1a28a91c174916e83b517236ea28b4fa."
+        ]
       },
       "browser": {
         "state": "pass",
